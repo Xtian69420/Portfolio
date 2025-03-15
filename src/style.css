@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(72, 85, 103), rgb(13, 30, 53));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    width: 65%;
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto;
+}
+ul{
+    display: flex;
+    margin-left: auto;
+}
+.li{
+    margin-right: 20px;
+    list-style-type: none;
+    color: rgb(150, 168, 191);
+    font-size: 18px;
+    font-family: "Roboto Mono";
+    transition: color 0.5s ease-out;
+}
+.resumeBtn{
+    display: flex;
+    height: 35px;
+    width: 85px;
+    border: none;
+    background-color: rgb(181, 90, 74);
+    color: rgb(16,28,44);
+    font-size: 18px;
+    padding: 5px;
+    font-family: "Roboto Mono";
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: background-color 0.5s ease-out;
+}
+
+.p1{
+    font-size: 18px;
+    font-family: "Roboto Mono";
+    color: rgb(150, 168, 191);
+    margin-left: 10px;
+    cursor:default;
+}
+.pfp{
+    width: 65px;
+    height: auto;
+    border: 3px solid;
+    border-radius: 50px;
+    border-color: rgb(181, 90, 74);
+}
+
+.resumeBtn:hover{
+    background-color: rgb(219, 112, 93);
+    cursor: pointer;
+}
+
+.li:hover{
+    color: rgb(219, 112, 93);
+    cursor: pointer;
+}
+
+.introContainer {
+    background-color: rgb(25, 41, 62);
+    width: 65%;
+    height: auto;
+    padding: 100px;
+    margin-top: 30px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 125px;
+    padding-top: 125px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    transition: box-shadow 0.4s ease;
+
+    animation-name: slideCard;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+.introContainer:hover {
+    box-shadow: 15px 20px 10px rgb(0, 0, 0);
+}
+
+@keyframes slideCard {
+    from{
+        transform: translateX(-1000px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.skillsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4%;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#skillsTitle {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-left: 17.5%;
+    margin-top: 100px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#skillsTitle::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgb(150, 168, 191);
+    margin-left: 5px;
+}
+
+.p2{
+    font-size: 20px;
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    color: rgb(150, 168, 191);
+    margin-left: 10px;
+    cursor:default;
+}
+
+.p3{
+    font-size: 70px;
+    font-family: "Roboto Mono";
+    font-weight: 900;
+    color: rgb(238, 238, 238);
+    margin-left: 5px;
+    cursor:default;
+}
+
+.p0{
+    font-size: 24px;
+    font-family: "Roboto Mono";
+    font-weight: 900;
+    color: rgb(181, 90, 74);
+    margin-left: 10px;
+    cursor:default;
+}
+.p01{
+    font-size: 15px;
+    font-family: "Roboto Mono";
+    font-weight: 300;
+    color: rgb(150, 168, 191);
+    margin-top: 55px;
+    margin-left: 10px;
+    cursor:default;
+}
+.p011{
+    font-size: 14px;
+    font-family: "Roboto Mono";
+    font-weight: 300;
+    color: rgb(150, 168, 191);
+    cursor:default;
+    text-align: justify;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+span{
+    color: white;
+}
+
+.p012{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-left: 17.5%;
+    margin-top: 0px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono";
+    font-size: 14px;
+    color: rgb(255,255,255);
+}
+
+.skillUL {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+    width: 65%;
+    margin: 0 auto; 
+    padding: 0; 
+    list-style: disc; 
+    list-style-position: inside; 
+    text-align: left; 
+    margin-bottom: 40px;
+}
+
+.Sli {
+    font-family: "Roboto Mono";
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(150, 168, 191);
+}
+.boxSkillContainer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 65%;
+    margin: 0 auto; 
+    margin-bottom: 10px;
+}
+
+.boxSkill {
+    display: flex;
+    background-color: rgb(25, 41, 62);
+    margin: 10px;
+    padding: 60px;
+    width: 100%;
+    height: 120px;
+    border-radius: 15px;
+    flex: 1 1 calc(35% - 20px);
+    box-sizing: border-box;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    transition: all 0.6s ease;
+}
+
+.boxSkP {
+    font-size: 14px;
+    font-family: "Roboto Mono";
+    font-weight: 300;
+    color: rgb(150, 168, 191);
+    cursor: default;
+    margin-right: 10px; 
+}
+
+.fa-database,
+.fa-cloud,
+.fa-question,
+.fa-shield {
+    color: rgb(181, 90, 74);
+    font-size: 48px;
+    margin-left: auto; 
+
+}
+
+.boxSkill:hover{
+    background-color: rgb(31, 50, 75);
+    box-shadow: 10px 10px 10px black;
+}

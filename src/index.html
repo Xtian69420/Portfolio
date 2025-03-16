@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/22dc8d85a3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favico.svg">
 </head>
 <body>
     <div class="Container">
@@ -14,22 +15,22 @@
             <img src="images/christian-pic.jfif" alt="image" class="pfp">
             <p class="p1">0-0</p>
             <ul>
-                <li class="li">Overview</li>
-                <li class="li">Content</li>
-                <li class="li">Contact</li>
+                <li class="li" data-target="overview">Overview</li>
+                <li class="li" data-target="content">Content</li>
+                <li class="li" data-target="contact">Contact</li>
             </ul>
-            <button class="resumeBtn" id="resumeBtn">Resume</button>
+            <button class="resumeBtn" id="resumeBtn" onclick="resume()" >Resume</button>
         </header>
         </div>
         
-        <div class="introContainer">
+        <div class="introContainer" id="overview">
             <p class="p2">Hey, I am</p>
             <p class="p3">CHRISTIAN SIGNO.</p>
             <p class="p0">SERVER DEVELOPER (BACKEND)</p>
             <p class="p01">Junior College student (PH) majoring in programming. I have experience building RESTful APIs using Node.js and FastAPI with Python. My focus is on creating <strong>efficient and scalable </strong>backend systems.</p>
         </div>
 
-        <div class="skills">
+        <div class="skills" id="content">
             <div class="skillsLine">
                 <p class="p2" id="skillsTitle">SKILLS AND ENVIRONMENTS</p>
             </div>
@@ -68,6 +69,47 @@
                     <li class="Sli">fastAPI</li>
                 </ul>
         </div>
+        <div class="textProj">
+            <p class="proj1">NOTABLE</p>
+            <p class="proj1" id="projsTitle">PROJECTS</p>
+        </div>
+        <div class="projContainer">
+            <div class="projBox1" onclick="hapag()">
+                <img src="images/1.svg" alt="mobile-app" class="pimg">
+                <p class="pp">MEAL-PREP MOBILE APP</p>
+                <p class="ppp"> A mobile app designed for sharing and discovering Filipino recipes, much ...</p>
+            </div>
+            <div class="projBox2" onclick="betcha()">
+                <img src="images/2.svg" alt="mobile-app" class="pimg">
+                <p class="pp">STAYCATION API SERVER</p>
+                <p class="ppp">A server-side application designed to support dynamic client-side...</p>
+            </div>
+            <div class="projBox3" onclick="imG()">
+                <img src="images/3.svg" alt="mobile-app" class="pimg">
+                <p class="pp"> IMAGE-GENERATOR CLONE API</p>
+                <p class="ppp"> generate AI-powered images based on user input, providing high-quality, customiz...</p>
+            </div>
+            <div class="projBox4" onclick="malaya()">
+                <img src="images/4.svg" alt="mobile-app" class="pimg">
+                <p class="pp">GAME-BASED-LEARNING</p>
+                <p class="ppp">2D mobile game designed to teach basic Java programming in a fun and...</p>
+            </div>
+        </div>
+
+        <div class="footerContainer" id="contact">
+            <div class="fb" onclick="fb()"><i class="fa-brands fa-facebook"></i></div>
+            <div class="ig" onclick="ig()"><i class="fa-brands fa-square-instagram"></i></div>
+            <div class="in" onclick="lin()"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="gh" onclick="gh()"><i class="fa-brands fa-github"></i></div>
+
+            <div class="otherCon">
+                <p class="titleC">Other Contacts:</p>
+                <p class="num" onclick="copyToClipboard(this)"><i class="fa-solid fa-phone"></i>+63 9603635263</p>
+                <p class="email" onclick="copyToClipboard(this)"><i class="fa-solid fa-envelope"></i> c.signo0612@gmail.com</p>
+            </div>
+        </div>
     </div>
+
+    <script src="functions.js"></script>
 </body>
 </html>

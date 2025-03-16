@@ -18,6 +18,9 @@ header{
     padding: 20px;
     align-items: center;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0);
+    top: 0;
+    z-index: 1000; 
 }
 ul{
     display: flex;
@@ -34,7 +37,7 @@ ul{
 .resumeBtn{
     display: flex;
     height: 35px;
-    width: 85px;
+    width: 95px;
     border: none;
     background-color: rgb(181, 90, 74);
     color: rgb(16,28,44);
@@ -44,7 +47,8 @@ ul{
     align-content: center;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 15px;
+    padding: 24px;
     transition: background-color 0.5s ease-out;
 }
 
@@ -85,7 +89,7 @@ ul{
     padding-bottom: 125px;
     padding-top: 125px;
     border-radius: 50px;
-    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
     transition: box-shadow 0.4s ease;
 
     animation-name: slideCard;
@@ -97,7 +101,8 @@ ul{
 }
 
 .introContainer:hover {
-    box-shadow: 15px 20px 10px rgb(0, 0, 0);
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 10px rgb(0, 0, 0);
 }
 
 @keyframes slideCard {
@@ -124,6 +129,7 @@ ul{
     width: 60%;
     margin-left: 17.5%;
     margin-top: 100px;
+    padding-top: 30px;
     font-weight: 600;
     margin-bottom: 20px;
     position: relative;
@@ -203,7 +209,7 @@ span{
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 10px; 
-    width: 65%;
+    width: 62%;
     margin: 0 auto; 
     padding: 0; 
     list-style: disc; 
@@ -257,7 +263,7 @@ span{
 .fa-cloud,
 .fa-question,
 .fa-shield {
-    color: rgb(181, 90, 74);
+    color: #ac5949;
     font-size: 48px;
     margin-left: auto; 
 
@@ -266,4 +272,250 @@ span{
 .boxSkill:hover{
     background-color: rgb(31, 50, 75);
     box-shadow: 10px 10px 10px black;
+}
+
+.footerContainer{
+    display: grid;
+    grid-template-rows: repeat(5, 120px);
+    grid-template-columns: repeat(8, 1fr);
+    margin-top: 130px;
+    margin-bottom: 60px;
+}
+
+.fb,
+.ig,
+.in,
+.gh{
+    grid-row: 3; 
+    margin: 0 auto;
+    align-content: center;
+    font-size: 100px;
+    color: rgb(139, 68, 55);
+    transition: all 0.5s ease;
+}
+
+.fb:hover,
+.ig:hover,
+.in:hover,
+.gh:hover {
+    font-size: 120px;
+    color: rgb(172, 89, 73);
+    cursor: pointer;
+}
+.fb{
+    grid-column: 3;
+}
+.ig{
+    grid-column: 4;
+}
+
+.in{
+    grid-column: 5;
+}
+.gh{
+    grid-column: 6;
+}
+.otherCon{
+    grid-row: 5;
+    grid-column: 4/6;
+    width: 100%;
+    align-content:start;
+
+}
+.num{
+    color: rgb(150, 168, 191);
+    font-size: 14px;
+    text-align: center;
+    font-family: "Roboto Mono";
+    cursor: pointer;
+}
+
+.email{
+    color: rgb(150, 168, 191);
+    font-size: 14px;
+    text-align: center;
+    font-family: "Roboto Mono";
+    cursor: pointer;
+}
+.titleC{
+    color: rgb(150, 168, 191);
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono";
+}
+
+.num:hover::after,
+.email:hover::after {
+    content: "\f0c5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 8px;
+}
+
+.fa-envelope,
+.fa-phone{
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+.projContainer{
+    display: grid;
+    grid-template-columns: 17.5% 1fr 1fr 1fr 1fr 17.5%;
+    grid-template-rows: repeat(1,1fr);
+}
+
+.projBox1, .projBox2, .projBox3, .projBox4 {
+    grid-row: 2;
+    background: rgb(25, 41, 62);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.projBox1 { grid-column: 5; }
+.projBox2 { grid-column: 2; }
+.projBox3 { grid-column: 4; }
+.projBox4 { grid-column: 3; }
+
+.projBox1:hover, .projBox2:hover, .projBox3:hover, .projBox4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 18px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pimg {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.pp {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: "Roboto Mono";
+}
+
+.ppp {
+    color: rgb(150, 168, 191);
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Roboto Mono";
+}
+
+@media (max-width: 768px) {
+    .projBox1, .projBox2, .projBox3, .projBox4 {
+        padding: 15px;
+    }
+}
+
+.textProj{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 17.5% 1fr 17.5%;
+}
+
+.proj1{
+    grid-column: 2;
+    font-family: "Roboto Mono";
+    font-size: 89px;
+    font-weight: 800;
+    color: #ac5949;
+}
+#projsTitle{
+    font-size: 100px;
+    font-weight: 1000;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .p1, .p2, .p3, .p0, .p01, .p011, .p012, .pp, .ppp {
+        font-size: 90%;
+    }
+    .resumeBtn {
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+    .pfp {
+        width: 55px;
+        border-radius: 40px;
+    }
+    .introContainer {
+        width: 80%;
+        padding: 60px;
+        border-radius: 30px;
+    }
+    .proj1 {
+        font-size: 72px;
+    }
+    #projsTitle {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .p1, .p2, .p3, .p0, .p01, .p011, .p012, .pp, .ppp {
+        font-size: 80%;
+    }
+    .resumeBtn {
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .pfp {
+        width: 45px;
+        border-radius: 35px;
+    }
+    .introContainer {
+        width: 90%;
+        padding: 40px;
+        border-radius: 20px;
+    }
+    .proj1 {
+        font-size: 60px;
+    }
+    #projsTitle {
+        font-size: 70px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(25, 41, 62); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(181, 90, 74); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(219, 112, 93); 
+}
+
+* {
+    scrollbar-color: rgb(181, 90, 74) rgb(25, 41, 62); 
+    scrollbar-width: thin; 
+}
+
+body {
+    scrollbar-face-color: rgb(181, 90, 74);
+    scrollbar-track-color: rgb(25, 41, 62);
 }
